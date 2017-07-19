@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>ssh免登陆密码的坑 | Tulelary博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在学习hadoop的入门视频，其中伪分布式部署有一项是SSH免密码登陆，命令如下：    ssh-keygen -t dsa -P ‘’ -f ~/.ssh/id_dsa    cat ~/.ssh/id_dsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys上面的命令中没有说明命令在何处运行，经过实验运行第一条命令之后会在/home/user/下生成一个.ssh文件夹">
+  <meta name="description" content="&amp;gt;最近在学习hadoop的入门视频，其中伪分布式部署有一项是SSH免密码登陆，命令如下： ssh-keygen -t dsa -P &amp;apos;&amp;apos; -f ~/.ssh/id_dsa cat ~/.ssh/id_dsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys 上面的命令中没有说明命令在何处运行，经过实验运行第一条命令之后会在/home/user/下生成">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ssh免登陆密码的坑">
 <meta property="og:url" content="http://yoursite.com/2017/07/18/ssh免登陆密码的坑/index.html">
 <meta property="og:site_name" content="Tulelary博客">
-<meta property="og:description" content="最近在学习hadoop的入门视频，其中伪分布式部署有一项是SSH免密码登陆，命令如下：    ssh-keygen -t dsa -P ‘’ -f ~/.ssh/id_dsa    cat ~/.ssh/id_dsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys上面的命令中没有说明命令在何处运行，经过实验运行第一条命令之后会在/home/user/下生成一个.ssh文件夹">
+<meta property="og:description" content="&amp;gt;最近在学习hadoop的入门视频，其中伪分布式部署有一项是SSH免密码登陆，命令如下： ssh-keygen -t dsa -P &amp;apos;&amp;apos; -f ~/.ssh/id_dsa cat ~/.ssh/id_dsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys 上面的命令中没有说明命令在何处运行，经过实验运行第一条命令之后会在/home/user/下生成">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-19T15:09:45.059Z">
+<meta property="og:updated_time" content="2017-07-19T15:13:26.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssh免登陆密码的坑">
-<meta name="twitter:description" content="最近在学习hadoop的入门视频，其中伪分布式部署有一项是SSH免密码登陆，命令如下：    ssh-keygen -t dsa -P ‘’ -f ~/.ssh/id_dsa    cat ~/.ssh/id_dsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys上面的命令中没有说明命令在何处运行，经过实验运行第一条命令之后会在/home/user/下生成一个.ssh文件夹">
+<meta name="twitter:description" content="&amp;gt;最近在学习hadoop的入门视频，其中伪分布式部署有一项是SSH免密码登陆，命令如下： ssh-keygen -t dsa -P &amp;apos;&amp;apos; -f ~/.ssh/id_dsa cat ~/.ssh/id_dsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys 上面的命令中没有说明命令在何处运行，经过实验运行第一条命令之后会在/home/user/下生成">
   
     <link rel="alternative" href="/atom.xml" title="Tulelary博客" type="application/atom+xml">
   
@@ -173,7 +173,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在学习hadoop的入门视频，其中伪分布式部署有一项是SSH免密码登陆，命令如下：<br>    ssh-keygen -t dsa -P ‘’ -f ~/.ssh/id_dsa<br>    cat ~/.ssh/id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys<br>上面的命令中没有说明命令在何处运行，经过实验运行第一条命令之后会在/home/user/下生成一个.ssh文件夹，进入文件夹之后再将密钥文件复制到当前用户文件夹下即可。</p>
+        <p>&gt;<br>最近在学习hadoop的入门视频，其中伪分布式部署有一项是SSH免密码登陆，命令如下：</p>
+<pre><code>ssh-keygen -t dsa -P &apos;&apos; -f ~/.ssh/id_dsa
+cat ~/.ssh/id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre><p>上面的命令中没有说明命令在何处运行，经过实验运行第一条命令之后会在/home/user/下生成一个.ssh文件夹，进入文件夹之后再将密钥文件复制到当前用户文件夹下即可。</p>
 
       
 
